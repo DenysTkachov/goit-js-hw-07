@@ -5,17 +5,13 @@ console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery");
 function createGalleryMarkup(item) {
-  return `
+    return `
     <li class="gallery__item">
-      <a class="gallery__link" href="${item.original}">
-        <img
-          class="gallery__image"
-          src="${item.preview}"
-          alt="${item.description}"
-        />
-      </a>
+     <a class="gallery__link" href="${item.original}">
+      <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
+     </a>
     </li>
-  `;
+    `;
 }
 
 
@@ -27,7 +23,7 @@ galleryEl.insertAdjacentHTML("beforeend", galleryMarkup);
 
 new SimpleLightbox(".gallery a", {
   captionsData: "alt",
-//   captionDelay: 250,
-  captionDelay: 100,
+  captionDelay: 250,
+//   captionDelay: 100,
 });
 
